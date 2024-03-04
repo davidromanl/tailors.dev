@@ -8,12 +8,16 @@ const { data } = await storyblokApi.get('cdn/stories/home', {
   version: 'draft',
 })
 
+interface Block {
+  Content: ISbRichtext | undefined
+}
+
 const story = data.story
-const body = story.content.body
+const body: Block[] = story.content.body
 ---
 
 <Layout title={story.name}>
   <div class="text-white max-w-6xl mx-auto">
-    { body.map((blok: { Content: ISbRichtext | undefined; }) =>  <RichTextRenderer richTextData={blok.Content} />)}
+    { body.map((blok) =>  <RichTextRenderer richTextData={blok.Content} />)}
   </div>
 </Layout>
