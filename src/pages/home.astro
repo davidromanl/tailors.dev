@@ -1,0 +1,19 @@
+---
+import { useStoryblokApi } from '@storyblok/astro'
+import StoryblokComponent from '@storyblok/astro/StoryblokComponent.astro'
+import RichTextRenderer from "@storyblok/astro/RichTextRenderer.astro";
+import Layout from '../layouts/Layout.astro'
+
+const storyblokApi = useStoryblokApi()
+const { data } = await storyblokApi.get('cdn/stories/home', {
+  version: 'draft',
+})
+
+const story = data.story
+---
+
+<Layout title={story.name}>
+  <div class="text-white max-w-6xl mx-auto">
+    { story.content.body.map(blok =>  <RichTextRenderer richTextData={blok.Content} />)}
+  </div>
+</Layout>
