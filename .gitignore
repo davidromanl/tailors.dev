@@ -21,3 +21,7 @@ pnpm-debug.log*
 .DS_Store
 package-lock.json
 *.json
+.http
+.vscode
+package-lock.json
+.nuxt
