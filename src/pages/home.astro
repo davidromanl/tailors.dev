@@ -8,11 +8,12 @@ const { data } = await storyblokApi.get('cdn/stories', {
   version: 'draft',
 })
 
-const story = data.story
+const story = data.story.content
+const body = story.body
 ---
 
 <Layout title='text'>
   <div class="text-white max-w-6xl mx-auto">
-    { story.map((blok: SbBlokData) =>  <StoryblokComponent blok={blok} />)}
+    { body.map((blok: SbBlokData) =>  <StoryblokComponent blok={blok} />)}
   </div>
 </Layout>
