@@ -1,6 +1,6 @@
 ---
-import { useStoryblokApi, type ISbRichtext } from '@storyblok/astro'
-import RichTextRenderer from "@storyblok/astro/RichTextRenderer.astro";
+import { useStoryblokApi, type SbBlokData } from '@storyblok/astro'
+import StoryblokComponent from "@storyblok/astro/StoryblokComponent.astro";
 import Layout from '../layouts/Layout.astro'
 
 const storyblokApi = useStoryblokApi()
@@ -8,16 +8,11 @@ const { data } = await storyblokApi.get('cdn/stories', {
   version: 'draft',
 })
 
-interface Block {
-  Content: ISbRichtext | undefined
-}
-
 const story = data.story
-const body: Block[] = story.content.body
 ---
 
 <Layout title={story.name}>
   <div class="text-white max-w-6xl mx-auto">
-    { body.map((blok) =>  <RichTextRenderer richTextData={blok.Content} />)}
+    { story.map((blok: SbBlokData) =>  <StoryblokComponent blok={blok} />)}
   </div>
 </Layout>
