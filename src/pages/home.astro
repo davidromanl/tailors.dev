@@ -4,7 +4,7 @@ import RichTextRenderer from "@storyblok/astro/RichTextRenderer.astro";
 import Layout from '../layouts/Layout.astro'
 
 const storyblokApi = useStoryblokApi()
-const { data } = await storyblokApi.get('cdn/stories/home', {
+const { data } = await storyblokApi.get('cdn/stories', {
   version: 'draft',
 })
 
