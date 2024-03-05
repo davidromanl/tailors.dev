@@ -24,3 +24,4 @@ package-lock.json
 .http
 .vscode
 package-lock.json
+.nuxt
