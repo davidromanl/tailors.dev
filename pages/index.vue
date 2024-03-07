@@ -5,7 +5,7 @@
     >
       <div>
         <h2 class="text-white font-bold italic text-5xl md:text-6xl">
-          Próximamente
+          Próximamente.
         </h2>
         <h3 class="text-[#0f65fe] text-5xl md:text-6xl font-bold italic mt-2">
           Tailors Dev...
