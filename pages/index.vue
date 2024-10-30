@@ -1,8 +1,3 @@
-<script setup>
-const config = useRuntimeConfig()
-console.log("config", config)
-console.log("process", process)
-</script>
 <template>
   <div>
     <div
