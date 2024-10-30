@@ -7,14 +7,5 @@ export default defineNuxtConfig({
     apiOptions: {
       region: "us"
     }
-  },
-  nitro: {
-    azure: {
-      config: {
-        platform: {
-          apiRuntime: 'node:20'
-        }
-      }
-    }
   }
 })
