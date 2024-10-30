@@ -52,9 +52,7 @@ jobs:
           name: node-app
 
       - name: Unzip artifact for deployment
-        run: |
-          unzip release.zip
-          ls
+        run: unzip release.zip
       
       - name: Login to Azure
         uses: azure/login@v2
@@ -69,5 +67,5 @@ jobs:
         with:
           app-name: 'tailors'
           slot-name: 'Production'
-          package: ./.output/output
+          package: release.zip
           
