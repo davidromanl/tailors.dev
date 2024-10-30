@@ -17,20 +17,20 @@
     </div>
   </div>
   <div class="absolute bottom-0 right-0 m-10 flex gap-4">
-    <Button>
+    <div>
       <Whatsapp
         class="fill-white hover:scale-105 duration-100 hover:fill-[#0f65fe] w-12"
       />
-    </Button>
-    <button>
+    </div>
+    <div>
       <Facebook
         class="fill-white hover:scale-105 duration-100 hover:fill-[#0f65fe] w-12"
       />
-    </button>
-    <button>
+    </div>
+    <div>
       <Instagram
         class="fill-white hover:scale-105 duration-100 hover:fill-[#0f65fe] w-12"
       />
-    </button>
+    </div>
   </div>
 </template>
