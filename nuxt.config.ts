@@ -5,7 +5,7 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       storyblokToken: process.env.STORYBLOK_TOKEN,
-      ...process
+      env: process.env
     }
   },
   storyblok: {
