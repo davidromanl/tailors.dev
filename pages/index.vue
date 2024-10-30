@@ -1,3 +1,7 @@
+<script setup>
+const config = useRuntimeConfig()
+console.log("config", config)
+</script>
 <template>
   <div>
     <div
