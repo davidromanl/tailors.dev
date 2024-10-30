@@ -2,12 +2,6 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ['@nuxtjs/tailwindcss','@storyblok/nuxt'],
-  runtimeConfig: {
-    public: {
-      storyblokToken: process.env.STORYBLOK_TOKEN,
-      env: JSON.stringify(import.meta.env)
-    }
-  },
   storyblok: {
     accessToken: process.env.STORYBLOK_TOKEN,
     apiOptions: {
