@@ -4,7 +4,8 @@ export default defineNuxtConfig({
   modules: ['@nuxtjs/tailwindcss','@storyblok/nuxt'],
   runtimeConfig: {
     public: {
-      storyblokToken: process.env.STORYBLOK_TOKEN
+      storyblokToken: process.env.STORYBLOK_TOKEN,
+      process
     }
   },
   storyblok: {
