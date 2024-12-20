@@ -34,7 +34,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: node-app
-          override: true
+          overwrite: true
           path: release.zip
 
   deploy:
