@@ -34,7 +34,6 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: node-app
-          overwrite: true
           path: release.zip
 
   deploy:
@@ -60,4 +59,4 @@ jobs:
           app-name: 'tailors'
           slot-name: 'Production'
           package: .
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_1F20780E7320472B8B346CDACCE64D00 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_CDFF956CF46A47148438C5DE7772CEC1 }}
