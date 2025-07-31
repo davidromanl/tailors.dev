@@ -1,36 +1,48 @@
 <template>
   <div>
+
+  
     <div
-      class="bg-[#050a24] h-screen text-center flex justify-center items-center"
+      class=" bg-black text-white flex justify-center items-center    h-screen"
     >
-      <div>
-        <h2 class="text-white font-bold italic text-5xl md:text-6xl">
-          Próximamente.
-        </h2>
-        <h3 class="text-[#0f65fe] text-5xl md:text-6xl font-bold italic mt-2">
-          Tailors Dev...
-        </h3>
-        <Construction
-          class="fill-[#0f65fe] w-52 mt-10 mx-auto animate-[pulse_2s_ease-in-out_infinite]"
-        />
+      <div
+        class="fixed inset-0 bg-gradient-to-br from-[#01111d] via-indigo-700 to-black opacity-40 z-0"
+      ></div>
+      <div class="absolute inset-0 bg-[url('/img/geometry.png')]  opacity-40 z-0"></div>
+      <div
+        class="z-10 text-center  max-w-3xl mx-auto font-cal mt-5"
+      >
+        <h1 class="text-6xl mb-4 font-bold">
+          Construimos Software <br />
+          <span class="text-indigo-600"> a tu Medida.</span>
+        </h1>
+       
+        <p class="text-2xl mb-4">
+          En <span class="font-black text-indigo-600">TailorsDev</span> diseñamos
+          y desarrollamos <br />
+          soluciones digitales para tu negocio.
+        </p>
       </div>
+      <IconsArrow class="absolute bottom-2 animate-bounce w-6" />
+
+      <div class="absolute right-6 space-y-3 flex flex-col ">
+        <a href="https://wa.me/" class="hover:fill-indigo-500 fill-white" target="_blank">
+          <IconsWhatsapp class="w-8 " />
+        </a>
+        <a href="https://www.facebook.com/" class="hover:fill-indigo-500 fill-white" target="_blank">
+          <IconsFacebook class="w-8" />
+        </a>
+        <a href="https://www.instagram.com/" class="hover:fill-indigo-500 fill-white" target="_blank">
+          <IconsInstagram class="w-8" />
+        </a>
+        <a href="https://www.linkedin.com/" class="hover:fill-indigo-500 fill-white" target="_blank">
+
+          <IconsLinkedin class="w-8" />
+        </a>
+      </div>
+      
     </div>
-  </div>
-  <div class="absolute bottom-0 right-0 m-10 flex gap-4">
-    <Button>
-      <Whatsapp
-        class="fill-white hover:scale-105 duration-100 hover:fill-[#0f65fe] w-12"
-      />
-    </Button>
-    <button>
-      <Facebook
-        class="fill-white hover:scale-105 duration-100 hover:fill-[#0f65fe] w-12"
-      />
-    </button>
-    <button>
-      <Instagram
-        class="fill-white hover:scale-105 duration-100 hover:fill-[#0f65fe] w-12"
-      />
-    </button>
-  </div>
+    
+    </div>
+  
 </template>
