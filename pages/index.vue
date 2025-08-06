@@ -1,3 +1,8 @@
+<script setup lang="ts">
+import Aplicaciones from '../components/Aplicaciones.vue';
+
+</script>
+
 <template>
   <div>
     <div class="bg-gradient-to-br from-[#01111d] via-indigo-700 to-black  text-white flex  h-screen">
@@ -52,7 +57,9 @@
       </svg>
     </div>
     <div class="bg-white h-screen">
-      <Proyectos />
+      <Aplicaciones />
     </div>
+
+   
   </div>
 </template>
