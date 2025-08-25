@@ -17,6 +17,8 @@
     "vue-router": "^4.3.0"
   },
   "devDependencies": {
-    "@nuxtjs/tailwindcss": "^6.11.4"
+    "@nuxtjs/tailwindcss": "^6.11.4",
+    "@types/node": "^22.13.9",
+    "mongodb": "^6.14.2"
   }
 }

@@ -56,10 +56,10 @@ import Aplicaciones from '../components/Aplicaciones.vue';
         </path>
       </svg>
     </div>
+
     <div class="bg-white h-screen">
       <Aplicaciones />
     </div>
 
-   
   </div>
 </template>
