@@ -11,17 +11,17 @@ export default defineEventHandler(async (event) => {
       .receiving
       .get(body.data.email_id);
 
-    const { data, error } = await resend.emails.send({
+    /* const { data, error } = await resend.emails.send({
       from: 'Acme <onboarding@resend.dev>',
       to: ['delivered@resend.dev'],
       subject: body.data.subject,
       html: email.html,
       text: email.text,
-    });
+    }); */
 
-    console.log(error)
+    console.log(email)
 
-    return data;
+    return email;
   }
 
   return {};
