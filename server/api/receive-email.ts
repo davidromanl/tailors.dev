@@ -9,7 +9,7 @@ export default defineEventHandler(async (event) => {
     const { data: email } = await resend
       .emails
       .receiving
-      .get(body.data.email_id);
+      .get("44a85f42-15e9-4dc0-a0c6-9f186f230e51");
 
     /* const { data, error } = await resend.emails.send({
       from: 'Acme <onboarding@resend.dev>',
@@ -21,7 +21,7 @@ export default defineEventHandler(async (event) => {
 
     console.log(email)
 
-    return email;
+    return {email};
   }
 
   return {};
