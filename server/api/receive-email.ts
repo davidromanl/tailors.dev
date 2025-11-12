@@ -9,19 +9,33 @@ export default defineEventHandler(async (event) => {
     const { data: email } = await resend
       .emails
       .receiving
-      .get("44a85f42-15e9-4dc0-a0c6-9f186f230e51");
+      .get(body.data.email_id);
 
-    /* const { data, error } = await resend.emails.send({
+    const { data: attachments } = await resend
+      .attachments
+      .receiving
+      .list({ emailId: body.data.email_id });
+
+    // Descargar los adjuntos y codificarlos en base64
+    for (const attachment of attachments.data) {
+      const response = await fetch(attachment.download_url);
+      const arrayBuffer = await response.arrayBuffer();
+      const buffer = Buffer.from(arrayBuffer);
+      attachment.content = buffer.toString('base64');
+    }
+
+    const { data, error } = await resend.emails.send({
       from: 'Acme <onboarding@resend.dev>',
       to: ['delivered@resend.dev'],
       subject: body.data.subject,
       html: email.html,
       text: email.text,
-    }); */
+      attachments
+    });
 
-    console.log(email)
+    console.log(error)
 
-    return {email};
+    return data;
   }
 
   return {};
