@@ -13,8 +13,8 @@ export default defineEventHandler(async (event) => {
 
 
     const { data, error } = await resend.emails.send({
-      from: 'Acme <onboarding@resend.dev>',
-      to: ['roman.david@gmail.com'],
+      from: 'Acme <ceo@tailorsdev.com>',
+      to: body.data.to,
       subject: body.data.subject,
       html: email.html,
       text: email.text,
