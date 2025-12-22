@@ -4,9 +4,9 @@ export default defineNuxtConfig({
 
   modules: ['@storyblok/nuxt', '@nuxt/ui'],
 
-  css: ['~/assets/css/tailwind.css'],
+  css: ['~/assets/css/main.css'],
 
-  compatibilityDate: '2024-10-29',
+  compatibilityDate: '2025-07-15',
   
 
   storyblok: {
